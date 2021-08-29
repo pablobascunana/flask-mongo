@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 colorlog = "*"
 flask = "*"
+flasgger = "*"
 flask-restful = "*"
 python-dotenv = "*"
 
