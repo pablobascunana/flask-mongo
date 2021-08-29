@@ -22,3 +22,7 @@ class User(db.Document):
             {'fields': ('email',), 'unique': True}
         ]
     }
+
+    @classmethod
+    def insert(cls, user: "User") -> "User":
+        return user.save()

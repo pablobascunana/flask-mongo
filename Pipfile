@@ -4,8 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+bcrypt = "*"
 colorlog = "*"
 flask = "*"
+flask-api = "*"
 flasgger = "*"
 flask_mongoengine = "*"
 flask-marshmallow = "*"
@@ -15,6 +17,7 @@ mongoengine = "*"
 python-dotenv = "*"
 
 [dev-packages]
+mongomock = "*"
 pytest = "*"
 
 [requires]

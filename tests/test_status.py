@@ -26,5 +26,4 @@ def test_version(client):
 
 def test_is_alive():
     status = check_database_is_alive(os.getenv('DATABASE'))
-    pytest.set_trace()
     assert status

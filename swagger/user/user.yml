@@ -1,0 +1,53 @@
+Register user
+---
+tags:
+  - User
+parameters:
+  - name: body
+    in: body
+    required: true
+    description: The user data to be registered
+    properties:
+      userName:
+        type: string
+        description: User userName
+        default: 'userName'
+      name:
+        type: string
+        description: User name
+        default: 'name'
+      lastName:
+        type: string
+        description: User lastname
+        default: 'lastName'
+      email:
+        type: string
+        description: User email
+        default: 'email@email.com'
+      password:
+        type: string
+        description: User password
+        default: 'password'
+
+definitions:
+  User:
+    type: object
+    properties:
+      userName:
+        type: string
+      name:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+
+responses:
+  201:
+    description: User registered successfully
+    schema:
+      $ref: '#/definitions/User'
+  400:
+    description: Incorrect request body
+  500:
+    description: Internal server error
