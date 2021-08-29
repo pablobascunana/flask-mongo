@@ -8,10 +8,11 @@ colorlog = "*"
 flask = "*"
 flasgger = "*"
 flask_mongoengine = "*"
+flask-marshmallow = "*"
 flask-restful = "*"
+marshmallow-mongoengine = "*"
 mongoengine = "*"
 python-dotenv = "*"
-
 
 [dev-packages]
 pytest = "*"

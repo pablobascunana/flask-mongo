@@ -7,6 +7,7 @@ load_dotenv()
 
 from config import logger
 from config.mongo import db
+from config.marshmallow import marshmallow as ma
 from config.swagger import SWAGGER_CONFIG
 from flask import Flask
 from flask_restful import Api
@@ -32,4 +33,5 @@ logging.info('The version number is: {}'.format(os.getenv('VERSION_NUMBER')))
 
 if __name__ == "__main__":
     db.init_app(app)
+    ma.init_app(app)
     app.run(port=5000, debug=os.getenv('DEBUG'))
