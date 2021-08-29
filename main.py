@@ -11,6 +11,7 @@ from config.swagger import SWAGGER_CONFIG
 from flask import Flask
 from flask_restful import Api
 from flasgger import Swagger
+from resources.routes.routes import create_resources
 
 app = Flask(__name__)
 
@@ -24,6 +25,8 @@ app.config['SWAGGER'] = SWAGGER_CONFIG
 swagger = Swagger(app)
 
 api = Api(app)
+
+create_resources(api)
 
 logging.info('The version number is: {}'.format(os.getenv('VERSION_NUMBER')))
 

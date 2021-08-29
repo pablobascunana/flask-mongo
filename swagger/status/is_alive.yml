@@ -1,0 +1,10 @@
+Get server status
+---
+tags:
+  - Status
+responses:
+  200:
+    description: Server is alive
+
+  500:
+    description: Server is not alive

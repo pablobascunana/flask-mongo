@@ -1,0 +1,7 @@
+Gets application version
+---
+tags:
+  - Status
+responses:
+  200:
+    description: The application version
