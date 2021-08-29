@@ -7,7 +7,9 @@ name = "pypi"
 colorlog = "*"
 flask = "*"
 flasgger = "*"
+flask_mongoengine = "*"
 flask-restful = "*"
+mongoengine = "*"
 python-dotenv = "*"
 
 
