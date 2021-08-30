@@ -9,9 +9,6 @@ class User(db.Document):
     lastName = db.StringField(required=True)
     email = db.EmailField(required=True)
     password = db.StringField(required=True)
-    verified = db.BooleanField(default=False)
-    state = db.StringField(default='INACTIVE')
-    role = db.StringField(default='ADMIN')
     loginAttempts = db.IntField(default=0)
     registerDate = db.DateField(default=datetime.datetime.now())
     lastLoginDate = db.DateField()
@@ -26,3 +23,7 @@ class User(db.Document):
     @classmethod
     def insert(cls, user: "User") -> "User":
         return user.save()
+
+    @classmethod
+    def get_user_by_username(cls, user: "User") -> "User":
+        return User.objects.get(userName=user.userName)

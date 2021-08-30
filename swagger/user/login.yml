@@ -1,0 +1,40 @@
+Login
+---
+tags:
+  - User
+parameters:
+  - name: body
+    in: body
+    required: true
+    description: The user data to be logged in
+    properties:
+      userName:
+        type: string
+        description: User userName
+        default: 'userName'
+      password:
+        type: string
+        description: User password
+        default: 'password'
+
+definitions:
+  Tokens:
+    type: object
+    properties:
+      access_token:
+        type: string
+      refresh_token:
+        type: string
+
+
+responses:
+  200:
+    description: User logged in successfully
+    schema:
+      $ref: '#/definitions/Tokens'
+  400:
+    description: Incorrect request body
+  401:
+    description: Incorrect credentials
+  500:
+    description: Internal server error
