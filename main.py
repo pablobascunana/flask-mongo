@@ -11,6 +11,7 @@ from config.marshmallow import marshmallow as ma
 from config.swagger import SWAGGER_CONFIG
 from datetime import timedelta
 from flask import Flask
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_restful import Api
 from flasgger import Swagger
@@ -40,6 +41,7 @@ swagger = Swagger(app)
 
 api = Api(app)
 jwt = JWTManager(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
 
 create_error_handlers(app)
 create_resources(api)

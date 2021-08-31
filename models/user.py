@@ -1,6 +1,5 @@
-import datetime
-
 from config.mongo import db
+from datetime import datetime
 
 
 class User(db.Document):
@@ -10,7 +9,7 @@ class User(db.Document):
     email = db.EmailField(required=True)
     password = db.StringField(required=True)
     loginAttempts = db.IntField(default=0)
-    registerDate = db.DateField(default=datetime.datetime.now())
+    registerDate = db.DateField(default=datetime.now())
     lastLoginDate = db.DateField()
 
     meta = {

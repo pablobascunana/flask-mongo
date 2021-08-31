@@ -1,5 +1,6 @@
 from flasgger import swag_from
 from flask import request
+from flask_cors import cross_origin
 from flask_restful import Resource
 from schemas.user import UserSchema
 from models.user import User as UserModel
