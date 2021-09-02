@@ -1,3 +1,4 @@
+from resources.location import Location
 from resources.status import IsAlive, Version
 from resources.user import Login, User
 
@@ -9,3 +10,4 @@ def create_resources(api):
     api.add_resource(Version, "/version")
     api.add_resource(Login, API_PATH + "/login")
     api.add_resource(User, API_PATH + "/user")
+    api.add_resource(Location, API_PATH + "/location/<string:user_uuid>")

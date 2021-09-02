@@ -25,4 +25,4 @@ class User(db.Document):
 
     @classmethod
     def get_user_by_username(cls, user: "User") -> "User":
-        return User.objects.get(userName=user.userName)
+        return cls.objects.get(userName=user.userName)
