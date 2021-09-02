@@ -1,0 +1,52 @@
+Get Locations
+---
+tags:
+  - Location
+
+definitions:
+  Position:
+    type: object
+    properties:
+      lat:
+        type: number
+      lng:
+        type: number
+
+  Marker:
+    type: object
+    properties:
+      date:
+        type: string
+        format: date-time
+        default: 2014-09-10T11:41:00.12343-03:00
+      title:
+        type: string
+      position:
+        type: object
+        properties:
+          lat:
+            type: number
+          lng:
+            type: number
+
+  Location:
+    type: object
+    properties:
+      markers:
+        type: array
+        items:
+          $ref: '#/definitions/Marker'
+      userId:
+        type: string
+
+responses:
+  200:
+    description: Locations retreived successfully
+    schema:
+      $ref: '#/definitions/Location'
+  401:
+    description: No permissions to execute
+  404:
+    description: User not found or does not have associated locations
+  500:
+    description: Internal server error

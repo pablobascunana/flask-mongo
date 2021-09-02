@@ -17,14 +17,14 @@ SWAGGER_STATUS_PATH = SWAGGER_PATH + 'location/'
 class Location(Resource):
     @classmethod
     @jwt_required()
-    @swag_from(SWAGGER_STATUS_PATH + 'location.yml')
+    @swag_from(SWAGGER_STATUS_PATH + 'location-get.yml')
     def get(cls, user_uuid):
         markers = LocationModel.get_locations_by_user_id(user_uuid)
         return created(location_schema.dump(markers))
 
     @classmethod
     @jwt_required()
-    @swag_from(SWAGGER_STATUS_PATH + 'location.yml')
+    @swag_from(SWAGGER_STATUS_PATH + 'location-post.yml')
     def post(cls, user_uuid):
         location = location_schema.load(request.get_json(), partial=True)
         location = LocationModel.insert_or_update(location)
@@ -32,7 +32,7 @@ class Location(Resource):
 
     @classmethod
     @jwt_required()
-    @swag_from(SWAGGER_STATUS_PATH + 'location.yml')
+    @swag_from(SWAGGER_STATUS_PATH + 'location-delete.yml')
     def delete(cls, user_uuid):
         marker = marker_schema.load(request.get_json(), partial=True)
         LocationModel.delete_marker(userId=user_uuid, marker=marker)
