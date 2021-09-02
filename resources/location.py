@@ -19,8 +19,8 @@ class Location(Resource):
     @jwt_required()
     @swag_from(SWAGGER_STATUS_PATH + 'location-get.yml')
     def get(cls, user_uuid):
-        markers = LocationModel.get_locations_by_user_id(user_uuid)
-        return created(location_schema.dump(markers))
+        locations = LocationModel.get_locations_by_user_id(user_uuid)
+        return created(location_schema.dump(locations))
 
     @classmethod
     @jwt_required()
