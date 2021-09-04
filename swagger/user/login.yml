@@ -37,6 +37,6 @@ responses:
   401:
     description: Incorrect credentials
   404:
-    description: User not exists
+    description: User does not exists
   500:
     description: Internal server error
