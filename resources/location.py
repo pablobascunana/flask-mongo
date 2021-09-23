@@ -11,8 +11,6 @@ location_schema = LocationSchema()
 marker_schema = MarkerSchema()
 SWAGGER_STATUS_PATH = SWAGGER_PATH + 'location/'
 
-# TODO securizar con el jwt
-
 
 class Location(Resource):
     @classmethod
@@ -20,7 +18,7 @@ class Location(Resource):
     @swag_from(SWAGGER_STATUS_PATH + 'location-get.yml')
     def get(cls, user_uuid):
         locations = LocationModel.get_locations_by_user_id(user_uuid)
-        return created(location_schema.dump(locations))
+        return ok(location_schema.dump(locations))
 
     @classmethod
     @jwt_required()

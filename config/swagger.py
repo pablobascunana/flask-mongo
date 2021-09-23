@@ -8,7 +8,7 @@ SWAGGER_CONFIG = {
     "specs": [
         {
             "version": "0.0.1",
-            "title": "Flask-MongoDB status API",
+            "title": "Flask-MongoDB locations API",
             "description": "Example of Restful API with MongoDB",
             "endpoint": "/",
             "route": "/",

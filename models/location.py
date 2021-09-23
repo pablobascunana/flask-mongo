@@ -24,6 +24,8 @@ class Location(db.Document):
 
     @classmethod
     def delete_marker(cls, userId: str, marker: "Marker") -> "Location":
-        '''https://stackoverflow.com/questions/10269056/using-mongodb-how-do-you-remove-embedded-document-from-a-list-based-on-a-match'''
+        """
+        https://stackoverflow.com/questions/10269056/using-mongodb-how-do-you-remove-embedded-document-from-a-list-based-on-a-match
+        """
         return cls.objects(userId=userId).update_one(
             pull__markers__title=Marker(title=marker.title).title)

@@ -7,13 +7,13 @@ load_dotenv()
 
 from datetime import timedelta
 from flask import Flask
-from utils.constants import JWT_ALGORITHM, JWT_IDENTITY_CLAIM
+from flask_jwt_extended import JWTManager
 from models.user import User as UserModel
 from mongoengine import connect, disconnect
 from schemas.user import UserSchema
 from usecases.user import do_user_login
 from utils.commons import generate_hash_password
-from flask_jwt_extended import JWTManager
+from utils.constants import JWT_ALGORITHM, JWT_IDENTITY_CLAIM
 
 
 MOCKED_DB_NAME = 'test'
