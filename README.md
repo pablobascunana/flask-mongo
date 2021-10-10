@@ -16,7 +16,7 @@ terminal and inside the test folder.
 ## How to use Locations API
 
 * Locations API can be consumed by the following
-[repository](https://github.com/pablobascunana/your-locations-vue2) that is a web page created with vue2 that allow you
+[repository](https://github.com/pablobascunana/locations-vue2) that is a web page created with vue2 that allow you
 to create users, get, save and delete locations.
 * Also you can consume the API using Postman importing the following
 [collection](https://www.getpostman.com/collections/707f21960956d6df9d11).
