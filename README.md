@@ -3,7 +3,7 @@
 Your locations is a RestFull API that connect with MongoDB and allows to create users, get, save and delete
 locations associated to it. The content of this project is only for educational purposes.
 
-## How run this project
+## How to run this project
 
 * This project use **Pipenv**. You can read the docs [here](https://pipenv-es.readthedocs.io/es/latest/).
 * You need to modify the database connection inside **.env** with your database credentials and the database name.
@@ -13,7 +13,7 @@ __pytest filename.py__ or the whole test collection with __pytest \*__. You shou
 terminal and inside the test folder.
 * When you run the project you can visit `http://localhost:5000/apidocs` to view the swagger documentation.
 
-## What use Your locations API
+## How to use Your locations API
 
 * Your locations API can be consumed by the following
 [repository](https://github.com/pablobascunana/your-locations-vue2) that is a web page created with vue2 that allow you
