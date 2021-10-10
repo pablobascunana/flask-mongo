@@ -1,6 +1,6 @@
-# Your locations API
+# Locations API
 
-Your locations is a RestFull API that connect with MongoDB and allows to create users, get, save and delete
+Locations is a RestFull API that connect with MongoDB and allows to create users, get, save and delete
 locations associated to it. The content of this project is only for educational purposes.
 
 ## How to run this project
@@ -13,9 +13,9 @@ __pytest filename.py__ or the whole test collection with __pytest \*__. You shou
 terminal and inside the test folder.
 * When you run the project you can visit `http://localhost:5000/apidocs` to view the swagger documentation.
 
-## How to use Your locations API
+## How to use Locations API
 
-* Your locations API can be consumed by the following
+* Locations API can be consumed by the following
 [repository](https://github.com/pablobascunana/your-locations-vue2) that is a web page created with vue2 that allow you
 to create users, get, save and delete locations.
 * Also you can consume the API using Postman importing the following
