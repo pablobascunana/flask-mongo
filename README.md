@@ -1,7 +1,7 @@
 # Your locations API
 
 Your locations is a RestFull API that connect with MongoDB and allows to create users, get, save and delete
-locations associated to it.
+locations associated to it. The content of this project is only for educational purposes.
 
 ## How run this project
 
