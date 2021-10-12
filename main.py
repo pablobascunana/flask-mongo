@@ -41,7 +41,7 @@ swagger = Swagger(app)
 
 api = Api(app)
 jwt = JWTManager(app)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 create_error_handlers(app)
 create_resources(api)
